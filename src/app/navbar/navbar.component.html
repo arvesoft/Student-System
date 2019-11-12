@@ -1,0 +1,9 @@
+<nav class="navbar navbar-expand navbar-dark bg-dark" >
+        <div class="navbar-nav">
+            <a class="nav-item nav-link" routerLink="/">Home</a>
+            <a class="nav-item nav-link" (click)="logout()" *ngIf="currentUser">Logout</a>
+            <a class="nav-item nav-link" routerLink="/register" *ngIf="userType == 'Admin' && currentUser">Register</a>
+            <a class="nav-item nav-link" routerLink="/dashboard" *ngIf="userType == 'Student' && currentUser">My Courses</a>
+          <a class="nav-item nav-link" routerLink="/Instructor" *ngIf="userType == 'Instructor' && currentUser">Instructor</a>
+        </div>
+    </nav>
